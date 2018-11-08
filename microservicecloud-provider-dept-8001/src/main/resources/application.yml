@@ -20,3 +20,16 @@ mybatis-plus:
   mapper-locations: classpath*:mapper/*/*.xml
   #实体扫描，多个package用逗号或者分号分隔
   typeAliasesPackage: com.ss.springcloud.entities
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id: microservicecloud-dept8001 # 自定义服务名称信息
+    prefer-ip-address: true # 访问路径可以显示IP地址
+
+info:
+  app.name: ss-microservicecloud
+  company.name: www.ss.com
+  build.artifactId: $project.artifactId$
+  buid.version: $project.version$

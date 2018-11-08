@@ -18,17 +18,19 @@ public class DeptController_Consumer {
 
     @PostMapping("/dept/add")
     public boolean add(Dept dept){
-        return restTemplate.postForObject(RSET_URL_PREFIX+"/dept/add",dept,Boolean.class);
+        return restTemplate.postForObject(RSET_URL_PREFIX + "/dept/add",dept,Boolean.class);
     }
     @GetMapping("/get/{id}")
     public Dept get(@PathVariable("id")Long id){
-        return restTemplate.getForObject(RSET_URL_PREFIX+"/dept/get/"+id,Dept.class);
+        return restTemplate.getForObject(RSET_URL_PREFIX + "/dept/get/"+id,Dept.class);
     }
     @GetMapping("/list")
     public List<Dept> getAll(){
-        return restTemplate.getForObject(RSET_URL_PREFIX+"/dept/list",List.class);
+        return restTemplate.getForObject(RSET_URL_PREFIX + "/dept/list",List.class);
     }
 
-
-
+    @GetMapping("/dept/dosconvery")
+    public Object discovery(){
+        return restTemplate.getForObject(RSET_URL_PREFIX + "/dept/discovery",Object.class);
+    }
 }

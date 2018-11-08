@@ -12,6 +12,7 @@
         <module>microservicecloud-api</module>
         <module>microservicecloud-provider-dept-8001</module>
         <module>microservicecloud-consumer-dept-80</module>
+        <module>micriservicecloud-eureka-7001</module>
 
     </modules>
 
@@ -82,4 +83,27 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <build>
+        <!-- 项目名称 -->
+        <finalName>microservicecloud</finalName>
+        <resources>
+            <resource>
+                <!-- 允许访问指定路径下的所有文件 -->
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <!-- 负责解析和解读,以$符号开头，以$符号结尾的东西允许被访问 -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <delimiters>
+                        <delimiter>$</delimiter>
+                    </delimiters>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
