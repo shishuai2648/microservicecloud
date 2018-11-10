@@ -9,7 +9,7 @@
 </parent>
 <modelVersion>4.0.0</modelVersion>
 
-<artifactId>micriservicecloud-eurrka-7001</artifactId>
+<artifactId>microservicecloud-eureka-7001</artifactId>
 
 <dependencies>
     <dependency>
