@@ -9,11 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>microservicecloud-provider-dept-8003</artifactId>
+    <artifactId>microservicecloud-provider-dept-hystrix-8001</artifactId>
+
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
         </dependency>
         <dependency>
             <groupId>com.ss.springcloud</groupId>
@@ -66,6 +67,5 @@
             <version>${mybatis.plus.boot.version}</version>
         </dependency>
     </dependencies>
-
 
 </project>

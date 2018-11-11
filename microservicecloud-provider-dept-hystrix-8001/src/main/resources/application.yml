@@ -1,0 +1,35 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: microservicecloud-dept
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/cloudDB01
+    username: root
+    password: 123
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+#mybatis
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*/*.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.ss.springcloud.entities
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: microservicecloud-dept8001-hystrix # 自定义服务名称信息
+    prefer-ip-address: true # 访问路径可以显示IP地址
+
+info:
+  app.name: ss-microservicecloud
+  company.name: www.ss.com
+  build.artifactId: $project.artifactId$
+  buid.version: $project.version$
