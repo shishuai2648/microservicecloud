@@ -7,4 +7,4 @@ spring:
     config:
       server:
         git:
-          uri: git@github.com:shishuai2648/microservicecloud.git
+          uri: https://github.com/shishuai2648/microservicecloud-config.git # GitHub上面的git仓库地址
